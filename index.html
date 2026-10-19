@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Official Terms and Conditions for Arrow Rush, the arrow puzzle game by AxomXpress.">
+  <title>Terms & Conditions | Arrow Rush</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080d1b;
+      --panel: rgba(19, 28, 53, .78);
+      --panel-solid: #111a31;
+      --text: #eef4ff;
+      --muted: #a7b4cf;
+      --cyan: #42d9ff;
+      --blue: #6287ff;
+      --line: rgba(148, 174, 224, .17);
+      --gold: #ffc96b;
+      --shadow: 0 24px 70px rgba(0,0,0,.28);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(45, 103, 208, .22), transparent 35rem),
+        radial-gradient(ellipse at 92% 12%, rgba(0, 212, 255, .12), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(8, 13, 27, .82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner {
+      width: min(1160px, calc(100% - 40px)); margin: auto;
+      min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--text); font-weight: 800; letter-spacing: .2px; }
+    .logo {
+      width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center;
+      color: #07101d; font-size: 22px; font-weight: 900;
+      background: linear-gradient(135deg, var(--cyan), #7d9bff);
+      box-shadow: 0 0 26px rgba(66,217,255,.24);
+    }
+    .brand small { display: block; color: var(--muted); font-weight: 600; font-size: 11px; letter-spacing: 1.7px; text-transform: uppercase; }
+    .toplink { font-size: 13px; font-weight: 700; color: var(--muted); border: 1px solid var(--line); padding: 9px 14px; border-radius: 999px; }
+    .toplink:hover { color: var(--text); border-color: rgba(66,217,255,.55); text-decoration: none; }
+    .hero {
+      width: min(1160px, calc(100% - 40px)); margin: 46px auto 28px;
+      padding: clamp(28px, 5vw, 58px); border: 1px solid rgba(92, 152, 255, .25);
+      border-radius: 30px; position: relative; overflow: hidden;
+      background: linear-gradient(120deg, rgba(21, 38, 75, .96), rgba(12, 21, 43, .88));
+      box-shadow: var(--shadow);
+    }
+    .hero:before, .hero:after { content: ""; position: absolute; pointer-events: none; border-radius: 50%; }
+    .hero:before { width: 320px; height: 320px; right: -70px; top: -145px; border: 1px solid rgba(66,217,255,.18); box-shadow: 0 0 0 35px rgba(66,217,255,.025), 0 0 0 75px rgba(66,217,255,.02); }
+    .hero:after { width: 190px; height: 190px; right: 80px; bottom: -135px; background: rgba(82,111,255,.10); filter: blur(10px); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--cyan); text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: 800; }
+    .eyebrow:before { content: ""; width: 22px; height: 2px; background: var(--cyan); }
+    h1 { margin: 14px 0 12px; font-size: clamp(36px, 6vw, 64px); letter-spacing: -2px; line-height: 1.08; max-width: 750px; }
+    .hero p { color: #c4d0e8; max-width: 650px; margin: 0; font-size: 16px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; position: relative; z-index: 1; }
+    .pill { display: inline-flex; gap: 7px; align-items: center; border: 1px solid var(--line); background: rgba(7,14,30,.35); border-radius: 999px; padding: 8px 12px; color: #d6e2fa; font-size: 12px; }
+    .pill strong { color: var(--text); }
+    .layout { width: min(1160px, calc(100% - 40px)); margin: 0 auto 64px; display: grid; grid-template-columns: 255px minmax(0, 1fr); gap: 24px; align-items: start; }
+    .toc { position: sticky; top: 94px; padding: 22px 18px; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); backdrop-filter: blur(16px); }
+    .toc h2 { margin: 0 0 12px; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); }
+    .toc a { display: block; padding: 7px 9px; border-radius: 9px; color: #bdc9e2; font-size: 12px; line-height: 1.45; }
+    .toc a:hover { color: var(--cyan); background: rgba(66,217,255,.07); text-decoration: none; }
+    .content { min-width: 0; }
+    .intro-note { padding: 19px 22px; margin-bottom: 18px; border: 1px solid rgba(255,201,107,.23); border-radius: 17px; background: rgba(255,201,107,.055); color: #e7d6b7; font-size: 13px; }
+    .intro-note strong { color: var(--gold); }
+    .section {
+      margin-bottom: 15px; padding: clamp(20px, 3vw, 29px);
+      border: 1px solid var(--line); border-radius: 20px;
+      background: linear-gradient(145deg, rgba(20,30,56,.9), rgba(13,21,40,.88));
+      box-shadow: 0 10px 35px rgba(0,0,0,.10);
+    }
+    .section-head { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 12px; }
+    .num {
+      flex: 0 0 36px; height: 36px; display: grid; place-items: center; border-radius: 11px;
+      background: rgba(66,217,255,.10); border: 1px solid rgba(66,217,255,.22); color: var(--cyan); font-size: 12px; font-weight: 900;
+    }
+    h2 { font-size: 18px; line-height: 1.35; margin: 4px 0 0; letter-spacing: -.25px; }
+    .section p { color: #c0cbe0; font-size: 14px; margin: 10px 0; }
+    .section ul { margin: 10px 0 10px 19px; padding: 0; color: #c0cbe0; font-size: 14px; }
+    .section li { padding: 3px 0 3px 4px; }
+    .section li::marker { color: var(--cyan); }
+    .contact-card {
+      padding: 25px; border-radius: 20px; border: 1px solid rgba(66,217,255,.25);
+      background: linear-gradient(120deg, rgba(20,68,94,.35), rgba(30,40,82,.42));
+    }
+    .contact-card h2 { margin: 0 0 10px; font-size: 20px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 17px; }
+    .contact-item { padding: 13px 15px; border: 1px solid var(--line); border-radius: 12px; background: rgba(5,12,26,.3); }
+    .contact-item span { display: block; color: var(--muted); font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 800; }
+    .contact-item strong, .contact-item a { display: block; overflow-wrap: anywhere; font-size: 13px; margin-top: 3px; }
+    footer { border-top: 1px solid var(--line); color: #8391ae; font-size: 12px; text-align: center; padding: 28px 20px 36px; }
+    .footer-brand { color: #c3cee5; font-weight: 800; }
+    @media (max-width: 820px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; }
+      .toc-links { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 2px 8px; }
+      .hero { margin-top: 24px; }
+    }
+    @media (max-width: 520px) {
+      .topbar-inner, .hero, .layout { width: min(100% - 24px, 1160px); }
+      .topbar-inner { min-height: 64px; }
+      .toplink { font-size: 11px; padding: 8px 10px; }
+      .hero { border-radius: 22px; }
+      h1 { letter-spacing: -1.2px; }
+      .toc-links { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .section { border-radius: 16px; }
+    }
+    @media print {
+      :root { color-scheme: light; --text:#111; --muted:#555; }
+      body { background: white; color: #111; }
+      .topbar, .toc { display: none; }
+      .hero, .section, .contact-card, .intro-note { background: white; color: #111; box-shadow: none; border: 1px solid #ddd; }
+      .hero p, .section p, .section ul, .contact-item strong { color: #222; }
+      .layout { display: block; width: 100%; }
+      .hero { margin: 0 0 20px; }
+      footer { color: #555; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Arrow Rush home">
+        <span class="logo" aria-hidden="true">➤</span>
+        <span>ARROW RUSH<small>by AxomXpress</small></span>
+      </a>
+      <a class="toplink" href="#contact">Contact & Support ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow">Official game policies</div>
+      <h1>Terms &amp;<br>Conditions</h1>
+      <p>Please read these terms before playing Arrow Rush. They explain the rules for using the game, virtual items, gameplay features, and related services.</p>
+      <div class="hero-meta">
+        <span class="pill">📅 <strong>Effective:</strong> October 19, 2026</span>
+        <span class="pill">🔄 <strong>Updated:</strong> October 19, 2026</span>
+        <span class="pill">🎮 <strong>App:</strong> Arrow Rush</span>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="toc" aria-label="Table of contents">
+        <h2>On this page</h2>
+        <nav class="toc-links">
+          <a href="#acceptance">01 · Acceptance</a>
+          <a href="#license">02 · License</a>
+          <a href="#restrictions">03 · User restrictions</a>
+          <a href="#virtual-items">04 · Virtual items</a>
+          <a href="#data">05 · Game data</a>
+          <a href="#third-party">06 · Third-party services</a>
+          <a href="#play-games">07 · Google Play Games</a>
+          <a href="#intellectual-property">08 · Intellectual property</a>
+          <a href="#updates">09 · Updates</a>
+          <a href="#warranties">10 · Warranties</a>
+          <a href="#liability">11 · Liability</a>
+          <a href="#fair-play">12 · Fair play</a>
+          <a href="#privacy">13 · Privacy</a>
+          <a href="#termination">14 · Termination</a>
+          <a href="#changes">15 · Changes</a>
+          <a href="#law">16 · Governing law</a>
+          <a href="#severability">17 · Severability</a>
+          <a href="#agreement">18 · Entire agreement</a>
+          <a href="#contact">19 · Contact</a>
+        </nav>
+      </aside>
+
+      <div class="content">
+        <div class="intro-note">
+          <strong>Important:</strong> These Terms are a general description of the rules for Arrow Rush. They do not override consumer, privacy, or other rights that cannot legally be waived. Ensure this page matches the features and services actually included in your app.
+        </div>
+
+        <section class="section" id="acceptance">
+          <div class="section-head"><span class="num">01</span><h2>Acceptance of Terms</h2></div>
+          <p>By downloading, installing, accessing, or playing Arrow Rush (“App”), you acknowledge that you have read and understood these Terms and Conditions (“Terms”). By using the App, you agree to these Terms to the extent permitted by applicable law. If you do not agree, discontinue using the App and uninstall it from your device.</p>
+          <p>If you are a minor under the laws applicable to you, you should use the App with the involvement or permission of your parent or legal guardian where required.</p>
+        </section>
+
+        <section class="section" id="license">
+          <div class="section-head"><span class="num">02</span><h2>License to Use</h2></div>
+          <p>Subject to your compliance with these Terms, M. I. Shadid (AxomXpress) grants you a personal, limited, revocable, non-exclusive, non-transferable, and non-sublicensable license to download, install, and use Arrow Rush on a compatible device that you own or control.</p>
+          <p>This license is for personal, non-commercial entertainment unless otherwise authorized in writing. All rights not expressly granted remain reserved by the Developer or the applicable rights holders.</p>
+        </section>
+
+        <section class="section" id="restrictions">
+          <div class="section-head"><span class="num">03</span><h2>User Restrictions</h2></div>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Reverse engineer, decompile, disassemble, or attempt to extract the source code, except where such restrictions are prohibited by applicable law.</li>
+            <li>Modify, adapt, or create derivative works from the App or its protected content without authorization.</li>
+            <li>Use cheats, exploits, bots, hacks, scripts, automated tools, or unauthorized software to manipulate gameplay, scores, rankings, coins, achievements, or level progression.</li>
+            <li>Interfere with the normal operation, security, or integrity of the App or its supported services.</li>
+            <li>Distribute, sell, rent, lease, sublicense, or commercially exploit the App or its assets without authorization.</li>
+            <li>Use the App in a manner that violates applicable law or infringes the rights of others.</li>
+          </ul>
+          <p>The Developer may take reasonable measures to address violations of these Terms, subject to applicable law.</p>
+        </section>
+
+        <section class="section" id="virtual-items">
+          <div class="section-head"><span class="num">04</span><h2>In-Game Currency &amp; Virtual Items</h2></div>
+          <p>Arrow Rush may include virtual items and gameplay features such as coins, stars, achievement badges, arrow skins, ranks, rewards, and other digital content (“Virtual Items”). Unless expressly stated otherwise:</p>
+          <ul>
+            <li>Virtual Items are digital gameplay features and have no independent real-world monetary value.</li>
+            <li>Virtual Items cannot be redeemed or exchanged for real-world money, goods, or services through the Developer.</li>
+            <li>Virtual Items do not represent ownership of real-world property or financial assets.</li>
+            <li>Virtual Items are licensed for use within the App and are not transferable between users unless a specific feature expressly permits it.</li>
+            <li>The availability, earning, and use of Virtual Items may depend on the game's features and progression system.</li>
+          </ul>
+          <p>Virtual Items are not refundable for cash merely because they are unused or because a player stops playing. This does not exclude any refund, cancellation, or other right required by applicable law or relevant platform policies.</p>
+        </section>
+
+        <section class="section" id="data">
+          <div class="section-head"><span class="num">05</span><h2>Game Progress &amp; Data Storage</h2></div>
+          <p>Arrow Rush may store game progress, scores, coins, settings, achievements, and other gameplay information locally on your device or through supported third-party services, depending on the feature.</p>
+          <p>Locally stored data may be lost if you uninstall the App, clear its storage, reset or replace your device, experience device failure or data corruption, or otherwise lose access to local information.</p>
+          <p>Cloud synchronization, account-based recovery, and transfer of progress between devices are not guaranteed unless explicitly supported. You are responsible for maintaining any backups or account access required by supported recovery features.</p>
+          <p>The Developer does not guarantee that all progress or Virtual Items can always be restored after data loss. Applicable rights under consumer protection or other laws remain unaffected.</p>
+        </section>
+
+        <section class="section" id="third-party">
+          <div class="section-head"><span class="num">06</span><h2>Advertisements &amp; Third-Party Services</h2></div>
+          <p>Arrow Rush may use third-party services to provide advertisements, analytics, crash reporting, gaming features, or other functionality, depending on the version of the App and the services implemented.</p>
+          <p>Such services may operate under their own terms, privacy policies, and data-handling practices. The Developer does not control the independent operations of third-party providers and cannot guarantee their continuous availability.</p>
+          <p>Advertising displayed through the App does not necessarily constitute an endorsement of the advertised products or services by the Developer. Third-party services remain subject to applicable law and the relevant providers' policies.</p>
+        </section>
+
+        <section class="section" id="play-games">
+          <div class="section-head"><span class="num">07</span><h2>Google Play Games &amp; Gaming Features</h2></div>
+          <p>If Arrow Rush supports Google Play Games Services or other gaming platforms, you may be able to access supported features such as achievements, leaderboards, player profiles, or synchronized progress.</p>
+          <p>Availability may depend on your device, account, internet connection, platform eligibility, and the services enabled for the App. Third-party gaming services may be subject to their own terms and privacy policies.</p>
+          <p>The Developer does not guarantee uninterrupted access to third-party gaming services or permanent availability of any particular feature. Local achievements and progress may differ from records maintained by an external gaming service.</p>
+        </section>
+
+        <section class="section" id="intellectual-property">
+          <div class="section-head"><span class="num">08</span><h2>Intellectual Property Rights</h2></div>
+          <p>Unless otherwise indicated, the App and its original content are owned by M. I. Shadid (AxomXpress) or licensed to the Developer. This may include software code, original level designs, game mechanics, arrow designs, visual assets, user interface, logos, branding, original artwork, sound effects, audio assets, and written content.</p>
+          <p>These materials are protected by applicable intellectual property laws. You may not copy, redistribute, commercially exploit, or create unauthorized derivative works from protected materials, except as permitted by law or with authorization from the relevant rights holder.</p>
+          <p>Third-party components and materials remain subject to their respective licenses and ownership rights.</p>
+        </section>
+
+        <section class="section" id="updates">
+          <div class="section-head"><span class="num">09</span><h2>Updates &amp; Compatibility</h2></div>
+          <p>The Developer may release updates, bug fixes, security improvements, new levels, gameplay adjustments, and other changes. Certain updates may be necessary to maintain compatibility with Android, Google Play requirements, or third-party services.</p>
+          <p>Features may change, be temporarily unavailable, or be discontinued where reasonably necessary, subject to applicable law. The Developer does not guarantee that every version of the App will remain compatible with every device or future operating system.</p>
+          <p>You should install updates from trusted and authorized distribution sources.</p>
+        </section>
+
+        <section class="section" id="warranties">
+          <div class="section-head"><span class="num">10</span><h2>Disclaimer of Warranties</h2></div>
+          <p>To the extent permitted by applicable law, Arrow Rush is provided on an “AS IS” and “AS AVAILABLE” basis. The Developer does not guarantee that the App will always be uninterrupted, error-free, secure, or compatible with every device.</p>
+          <p>The Developer does not warrant that every defect will be corrected or that all gameplay data can be preserved under every circumstance.</p>
+          <p>Nothing in these Terms excludes any warranty, statutory protection, or consumer right that cannot lawfully be excluded under applicable law.</p>
+        </section>
+
+        <section class="section" id="liability">
+          <div class="section-head"><span class="num">11</span><h2>Limitation of Liability</h2></div>
+          <p>To the maximum extent permitted by applicable law, the Developer shall not be liable for indirect, incidental, special, or consequential losses arising from the use of or inability to use the App. This may include loss of locally stored game progress, interruption of gameplay, or temporary unavailability of third-party services.</p>
+          <p>Nothing in these Terms excludes or limits liability where such exclusion or limitation is prohibited by law, including applicable rights relating to fraud, wilful misconduct, negligence, personal injury, or mandatory consumer protections.</p>
+          <p>Where liability cannot lawfully be excluded, it shall be limited only to the extent permitted by applicable law.</p>
+        </section>
+
+        <section class="section" id="fair-play">
+          <div class="section-head"><span class="num">12</span><h2>Fair Play &amp; Enforcement</h2></div>
+          <p>Arrow Rush is intended to provide a fair and enjoyable gaming experience. The Developer may investigate suspected cheating, unauthorized manipulation, exploitation of bugs, or interference with game features.</p>
+          <p>Where reasonably necessary, the Developer may correct affected scores, restrict access to affected features, or take other proportionate measures permitted by law. Any action affecting access to the App or its features will be subject to applicable legal requirements.</p>
+        </section>
+
+        <section class="section" id="privacy">
+          <div class="section-head"><span class="num">13</span><h2>Privacy &amp; Personal Information</h2></div>
+          <p>Your use of Arrow Rush is also subject to the App's Privacy Policy, which explains how information is collected, processed, stored, shared, and protected.</p>
+          <p>The Privacy Policy should accurately describe the App's actual data practices and the third-party services it uses. These Terms do not replace the Privacy Policy.</p>
+          <p>If a provision of these Terms conflicts with a mandatory privacy or data-protection requirement, the applicable legal requirement will prevail.</p>
+        </section>
+
+        <section class="section" id="termination">
+          <div class="section-head"><span class="num">14</span><h2>Suspension &amp; Termination</h2></div>
+          <p>You may stop using Arrow Rush at any time by discontinuing its use and uninstalling it from your device.</p>
+          <p>The Developer may modify, suspend, restrict, or discontinue the App or particular features where reasonably necessary, including for maintenance, security, technical, legal, or operational reasons. The Developer may take appropriate action in response to material violations of these Terms, subject to applicable law.</p>
+          <p>Termination or discontinuation may affect access to locally stored progress or particular gameplay features. Nothing in this section removes any rights or remedies available under applicable law.</p>
+        </section>
+
+        <section class="section" id="changes">
+          <div class="section-head"><span class="num">15</span><h2>Changes to These Terms</h2></div>
+          <p>The Developer may revise these Terms from time to time to reflect changes in the App, its features, applicable law, or operational practices.</p>
+          <p>Revised Terms will be published on this page together with an updated “Last Updated” date. Where required by law, significant changes will be communicated or presented for consent as applicable.</p>
+          <p>You should periodically review this page to remain informed about the current Terms.</p>
+        </section>
+
+        <section class="section" id="law">
+          <div class="section-head"><span class="num">16</span><h2>Governing Law &amp; Disputes</h2></div>
+          <p>These Terms shall be governed by the applicable laws of India, subject to any mandatory legal protections or consumer rights that apply to you.</p>
+          <p>Any dispute arising in connection with the App shall be handled in accordance with applicable law and the procedures available to the parties under that law.</p>
+          <p>Nothing in this section deprives a consumer of any mandatory right to bring a claim before a competent court or authority.</p>
+        </section>
+
+        <section class="section" id="severability">
+          <div class="section-head"><span class="num">17</span><h2>Severability</h2></div>
+          <p>If any provision of these Terms is found to be invalid, unlawful, or unenforceable, that provision shall be interpreted or limited to the extent necessary to comply with applicable law. The remaining provisions shall continue to apply to the extent they remain valid and enforceable.</p>
+        </section>
+
+        <section class="section" id="agreement">
+          <div class="section-head"><span class="num">18</span><h2>Entire Agreement</h2></div>
+          <p>These Terms, together with the applicable Privacy Policy and any additional terms expressly presented for particular features, govern your use of Arrow Rush.</p>
+          <p>Nothing in this section overrides mandatory rights or protections provided by applicable law.</p>
+        </section>
+
+        <section class="contact-card" id="contact">
+          <h2>Questions? Get in touch.</h2>
+          <p style="color:#bdc9e2;margin:0;font-size:14px;">For support requests, feedback, or legal inquiries relating to Arrow Rush or these Terms, contact the developer.</p>
+          <div class="contact-grid">
+            <div class="contact-item"><span>Developer / Publisher</span><strong>M. I. Shadid (AxomXpress)</strong></div>
+            <div class="contact-item"><span>Application</span><strong>Arrow Rush</strong></div>
+            <div class="contact-item"><span>Package Name</span><strong>com.axomxpress.arrowrush</strong></div>
+            <div class="contact-item"><span>Email</span><a href="mailto:axomxpress@gmail.com">axomxpress@gmail.com ↗</a></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-brand">➤ ARROW RUSH · AXOMXPRESS</div>
+    <div style="margin-top:6px;">© 2026 M. I. Shadid (AxomXpress). All rights reserved, subject to applicable third-party rights and licenses.</div>
+    <div style="margin-top:5px;">This page describes the Terms &amp; Conditions for Arrow Rush.</div>
+  </footer>
+</body>
+</html>
